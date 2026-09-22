@@ -71,6 +71,18 @@ h1 {
   font-size: 16px;
   color: #5d6976;
 }
+.how-to { margin: 0 0 28px; }
+.how-to h2 { margin: 0 0 10px; font-size: 18px; color: var(--navy); }
+.how-to blockquote {
+  margin: 0 0 12px;
+  padding: 16px 20px;
+  background: #f4f6f8;
+  border-left: 3px solid var(--navy);
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+.how-to blockquote p:last-child { margin-bottom: 0; }
+.how-to > p { margin: 0; font-size: 14px; color: var(--muted); }
 .metadata {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -399,10 +411,19 @@ footer {
     <span class="stamp">办理指南审核稿</span>
   </div>
   <h1>深科创学院<br>行政办理指南</h1>
-  <p class="lead">团队信息确认后长期保存；每笔事项分别判断。Agent 读取档案、匹配流程，并准备本次要用的表格与材料。</p>
+  <p class="lead">把这个 Skill 发给你正在使用的 Agent，告诉它你要办什么，再附上已有订单、合同或发票。它会询问必要信息，帮你判断流程、填写表格并整理材料。</p>
+  <div class="how-to">
+    <h2>怎么用</h2>
+    <blockquote>
+      <p>把下面这段话复制给 Agent：</p>
+      <p>请读取并使用这个 Skill，以及其中的规则和 Word 模板，帮我准备深圳科创学院的行政办理材料：<br><a href="https://github.com/ericshang98/innox-admin-skill">https://github.com/ericshang98/innox-admin-skill</a></p>
+      <p>我要办理的事是：[写你要买什么或报销什么]。请根据我提供的材料准备表格和填写内容，缺少必要信息时直接问我。</p>
+    </blockquote>
+    <p>以后办理新事项，直接告诉 Agent 这次要办什么，并提供本次材料。已保存的团队信息会继续沿用；团队或阶段有变化时告诉它即可。下面的指南供你了解和核对办理流程。</p>
+  </div>
   <dl class="metadata">
     <div><dt>适用系统</dt><dd>企业微信里的合思、资采管理</dd></div>
-    <div><dt>工作方式</dt><dd>读档案 → 判断事项 → 填表备料</dd></div>
+    <div><dt>使用方式</dt><dd>把 Skill 发给 Agent，再说明要办的事</dd></div>
   </dl>
   <div class="authority">按已提供的培训录音、三张验收模板，以及当前账号里能看到的入口整理。金额边界、阶段细则和部分表单名称仍待学院确认；会影响办理的位置会直接写明。</div>
 </header>

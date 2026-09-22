@@ -12,7 +12,16 @@
 
 ## 使用 Skill
 
-将 `skills/innox-invoice/` 完整复制到所用 Agent 的 Skill 目录，保留 `references/`、`scripts/` 和 `assets/`。该项目只提供 Skill 包，不会自行安装应用、取得学院权限或同步个人资料。
+把下面这段话复制给你正在使用的 Agent，再附上已有订单、合同或发票：
+
+> 请读取并使用这个 Skill，以及其中的规则和 Word 模板，帮我准备深圳科创学院的行政办理材料：
+> https://github.com/ericshang98/innox-admin-skill
+>
+> 我要办理的事是：[写你要买什么或报销什么]。请根据我提供的材料准备表格和填写内容，缺少必要信息时直接问我。
+
+以后办理新事项，直接说明这次要办什么，并提供本次材料。已保存的团队信息会继续沿用；团队或阶段有变化时告诉 Agent 即可。
+
+Agent 应读取完整的 `skills/innox-invoice/`，包括 `SKILL.md`、`references/`、`scripts/` 和 `assets/`。若所用 Agent 无法读取 GitHub，可下载仓库后把完整 Skill 文件夹交给它。实际文件处理和长期保存能力取决于运行环境；本项目不会自行取得学院系统权限。
 
 Agent 开始办理时先读取 `references/memory.md`。本地档案默认保存在 `~/.local/share/innox-admin/`，也可通过 `INNOX_ADMIN_DATA_DIR` 指定私有目录。Python 辅助脚本仅依赖标准库：
 
