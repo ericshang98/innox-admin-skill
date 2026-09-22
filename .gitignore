@@ -1,0 +1,18 @@
+.local/
+.env
+.env.*
+!.env.example
+__pycache__/
+.DS_Store
+node_modules/
+*.m4a
+*.wav
+*.docx
+*.pdf
+review-decisions*.json
+
+# Only supplied reusable templates are public.
+!skills/innox-invoice/assets/templates/*.docx
+.private/
+state/
+outputs/

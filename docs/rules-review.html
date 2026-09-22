@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>深科创学院行政办理指南｜Agent 填写指南</title>
+<style>
+:root {
+  --ink: #1c2430;
+  --navy: #17364a;
+  --muted: #66717d;
+  --line: #e4e7eb;
+  --paper: #fff;
+  --page: #efece6;
+  --gold: #8a6a32;
+  --now: #17364a;
+}
+* { box-sizing: border-box; }
+html { scroll-padding-top: 24px; }
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font: 16px/1.75 -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+a { color: var(--navy); text-underline-offset: 3px; cursor: pointer; }
+a:hover { color: #0c4a6e; }
+a:active { color: #082f45; }
+a:focus-visible { outline: 2px solid #3d7095; outline-offset: 3px; }
+.paper {
+  max-width: 820px;
+  margin: 28px auto 72px;
+  background: var(--paper);
+  border: 1px solid #e3ddd3;
+}
+.cover {
+  padding: 48px 56px 28px;
+  border-top: 6px solid var(--navy);
+}
+.masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.eyebrow {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 1.4px;
+  color: var(--muted);
+}
+.stamp {
+  font-size: 12px;
+  color: var(--gold);
+  border: 1px solid #d9c7a4;
+  padding: 3px 10px;
+  white-space: nowrap;
+}
+h1 {
+  margin: 0 0 12px;
+  font-size: 34px;
+  line-height: 1.35;
+  letter-spacing: .4px;
+  font-weight: 650;
+  color: var(--navy);
+}
+.lead {
+  margin: 0 0 26px;
+  font-size: 16px;
+  color: #5d6976;
+}
+.metadata {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 28px;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
+}
+.metadata div { display: flex; gap: 14px; }
+.metadata dt { color: #85909c; min-width: 64px; }
+.metadata dd { margin: 0; color: #3d4c5c; }
+.authority {
+  margin-top: 18px;
+  padding-left: 14px;
+  border-left: 3px solid #c4a36a;
+  color: #6f5a3a;
+  font-size: 13px;
+  line-height: 1.8;
+}
+.toc {
+  padding: 22px 56px 8px;
+  border-bottom: 1px solid var(--line);
+}
+.toc .label {
+  margin: 0 0 10px;
+  font-size: 11px;
+  letter-spacing: 1.6px;
+  color: #7d8792;
+}
+.toc-links { display: flex; flex-wrap: wrap; gap: 6px 18px; }
+.toc a {
+  color: #4d5c6b;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 4px 0;
+}
+.toc a:hover { color: var(--navy); text-decoration: underline; }
+.toc a span {
+  display: inline-block;
+  width: 22px;
+  color: #93a0ab;
+  font-size: 11px;
+}
+.body { padding: 8px 56px 48px; }
+.overview {
+  background: #f4f6f8;
+  padding: 22px 24px;
+  margin: 28px 0 12px;
+}
+.overview-title {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #6a7b8b;
+}
+.decision-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin: 0 0 8px;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.7;
+}
+.decision-line span { flex: 0 0 auto; }
+.decision-line span:not(:last-child)::after {
+  content: " → ";
+  font-weight: 500;
+  color: #8a96a3;
+}
+.muted { margin: 0; font-size: 13px; color: var(--muted); }
+.spine {
+  list-style: none;
+  margin: 8px 0 36px;
+  padding: 0;
+  counter-reset: spine;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.spine li {
+  position: relative;
+  counter-increment: spine;
+  padding: 14px 0 14px 40px;
+  border-bottom: 1px solid #eef1f4;
+}
+.spine li:last-child { border-bottom: 0; }
+.spine li:before {
+  content: counter(spine);
+  position: absolute;
+  left: 0;
+  top: 16px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #eaf0f4;
+  color: #46617a;
+  font-size: 12px;
+  line-height: 26px;
+  text-align: center;
+}
+.spine b { display: block; color: var(--navy); font-size: 15px; }
+.spine span { display: block; margin-top: 3px; color: var(--muted); font-size: 13px; }
+section { margin-top: 48px; }
+.section-head {
+  margin-bottom: 22px;
+  padding-top: 16px;
+  border-top: 2px solid var(--navy);
+}
+.section-label {
+  margin: 0 0 4px;
+  font-size: 11px;
+  letter-spacing: 1.8px;
+  color: #758599;
+}
+.section-head h2 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.45;
+  font-weight: 650;
+  color: var(--navy);
+}
+.section-desc {
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+h3 {
+  margin: 28px 0 10px;
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 650;
+  color: #24384a;
+}
+p { margin: 0 0 12px; }
+.decision-order {
+  list-style: none;
+  margin: 8px 0 28px;
+  padding: 0;
+  counter-reset: decision;
+}
+.decision-order li {
+  position: relative;
+  margin-left: 13px;
+  padding: 0 0 18px 40px;
+  border-left: 1px solid #dde4ea;
+  counter-increment: decision;
+}
+.decision-order li:last-child { border: 0; padding-bottom: 0; }
+.decision-order li:before {
+  content: counter(decision);
+  position: absolute;
+  left: -13px;
+  top: 0;
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  background: #eaf0f5;
+  color: #46617a;
+  font-size: 12px;
+  border-radius: 50%;
+}
+.decision-order strong { font-size: 16px; color: var(--navy); }
+.decision-order p { margin: 4px 0 0; font-size: 14px; color: #627183; }
+.scenario {
+  margin: 34px 0 40px;
+  padding: 0 0 0 22px;
+  border-left: 3px solid var(--navy);
+}
+.scenario h3, .worked-example h3 {
+  margin: 0 0 6px;
+  font-size: 20px;
+  color: var(--navy);
+}
+.kicker {
+  margin: 0 0 4px;
+  font-size: 12px;
+  letter-spacing: .8px;
+  color: #7b8b99;
+}
+.condition {
+  margin: 0 0 14px;
+  font-size: 13px;
+  color: #748091;
+}
+.now {
+  background: var(--now);
+  color: #fff;
+  padding: 14px 18px;
+  margin: 0 0 8px;
+}
+.now span {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  color: #c5d5e0;
+}
+.now strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.75;
+}
+.route-detail { margin: 0; }
+.route-detail div {
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  gap: 14px;
+  padding: 11px 0;
+  border-bottom: 1px solid #e8edf1;
+}
+.route-detail div:last-child { border-bottom: 0; padding-bottom: 0; }
+.route-detail dt { font-size: 12px; color: #81909e; padding-top: 2px; }
+.route-detail dd { margin: 0; font-size: 14px; }
+.table-wrap { margin: 14px 0 24px; overflow-x: auto; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  line-height: 1.75;
+  min-width: 520px;
+}
+th {
+  text-align: left;
+  vertical-align: top;
+  padding: 10px 12px;
+  color: #4b6175;
+  background: #eef2f5;
+  font-weight: 600;
+  border-top: 1px solid #d5dee5;
+  border-bottom: 1px solid #d5dee5;
+}
+td {
+  vertical-align: top;
+  padding: 13px 12px;
+  border-bottom: 1px solid #e3e7eb;
+}
+td:first-child {
+  width: 26%;
+  font-weight: 550;
+  color: #314659;
+}
+.callout {
+  background: #fbf6ec;
+  border-left: 3px solid #b98a49;
+  padding: 13px 16px;
+  margin: 16px 0 24px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #745b38;
+}
+.callout strong { color: #775222; }
+.callout p { margin: 4px 0 0; }
+.worked-example {
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid #d5dee6;
+}
+.example-decision {
+  background: #edf3f7;
+  color: #284b66;
+  padding: 12px 15px;
+  font-size: 15px;
+  margin: 0 0 12px;
+}
+.example-decision b {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 11px;
+  letter-spacing: .8px;
+  color: #778c9e;
+}
+.worked-example ol { font-size: 14px; padding-left: 22px; }
+.worked-example li { margin-bottom: 10px; }
+.example-missing {
+  font-size: 12px;
+  color: #7f6540;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 56px 22px;
+  border-top: 1px solid var(--line);
+  color: #82909d;
+  font-size: 11px;
+}
+@media (max-width: 860px) {
+  body { background: #fff; }
+  .paper { margin: 0; border: 0; }
+  .cover, .toc, .body { padding-left: 22px; padding-right: 22px; }
+  .cover { padding-top: 32px; }
+  footer { padding: 16px 22px; display: block; }
+  h1 { font-size: 28px; }
+  .metadata { grid-template-columns: 1fr; }
+  .scenario { padding-left: 16px; }
+  .route-detail div { grid-template-columns: 1fr; gap: 4px; }
+  table { min-width: 0; }
+  .table-wrap { overflow-x: visible; }
+  .decision-line { display: none; }
+}
+@media print {
+  @page { size: A4; margin: 16mm 14mm; }
+  body { background: #fff; font-size: 10.5pt; }
+  .paper { margin: 0; border: 0; max-width: none; }
+  .toc { display: none; }
+  .cover { padding: 0 0 18px; border-top-width: 3px; }
+  .body, footer { padding-left: 0; padding-right: 0; }
+  h1 { font-size: 22pt; }
+  .section-head h2 { font-size: 15pt; }
+  .now, .callout, .scenario, .worked-example, tr { break-inside: avoid; }
+  a { color: inherit; text-decoration: none; }
+  table { min-width: 0; font-size: 9pt; }
+}
+</style>
+</head>
+<body>
+<article class="paper">
+<header class="cover">
+  <div class="masthead">
+    <p class="eyebrow">深圳科创学院 · Agent 填写指南</p>
+    <span class="stamp">办理指南审核稿</span>
+  </div>
+  <h1>深科创学院<br>行政办理指南</h1>
+  <p class="lead">团队信息确认后长期保存；每笔事项分别判断。Agent 读取档案、匹配流程，并准备本次要用的表格与材料。</p>
+  <dl class="metadata">
+    <div><dt>适用系统</dt><dd>企业微信里的合思、资采管理</dd></div>
+    <div><dt>工作方式</dt><dd>读档案 → 判断事项 → 填表备料</dd></div>
+  </dl>
+  <div class="authority">按已提供的培训录音、三张验收模板，以及当前账号里能看到的入口整理。金额边界、阶段细则和部分表单名称仍待学院确认；会影响办理的位置会直接写明。</div>
+</header>
+<nav class="toc" aria-label="办理指南目录">
+  <p class="label">Agent 办理顺序</p>
+  <div class="toc-links"><a href='#memory'><span>01</span>长期档案与本次事项</a>
+<a href='#start'><span>02</span>按本次事项判断流程</a>
+<a href='#purchase'><span>03</span>采购：按金额怎么走</a>
+<a href='#payment'><span>04</span>资金：报销还是核销</a>
+<a href='#acceptance'><span>05</span>买了什么，验收什么</a>
+<a href='#fill'><span>06</span>打开表单，具体填什么</a>
+<a href='#deliverables'><span>07</span>每次交付什么材料</a>
+<a href='#examples'><span>08</span>完整例子：照着看路径</a>
+<a href='#exceptions'><span>09</span>特殊情况与中途接着办</a></div>
+</nav>
+<div class="body"><div class="overview"><p class="overview-title">每次调用，按这个顺序推进</p><p class="decision-line"><span>读取长期档案</span><span>识别本次事项</span><span>判断流程</span><span>填写并备料</span><span>保存进度</span></p><p class="muted">团队信息不重复问，采购信息不混用。Agent 根据已有资料准备本次材料，仅补问影响办理的缺项。</p></div>
+<section id='memory'><div class='section-head'><p class='section-label'>01 / Agent 填写指南</p><h2>团队信息记住一次，每笔业务单独办理</h2><p class='section-desc'>这份指南规定 Agent 如何准备行政办理材料。当前覆盖采购、验收、预支、核销和报销；团队资料持续复用，每笔事项留下独立记录。</p></div><div class='table-wrap'><table><thead><tr><th scope='col'>信息层级</th><th scope='col'>保存什么</th><th scope='col'>什么时候再问</th></tr></thead><tbody><tr><td>团队长期档案</td><td>团队／项目名称、预探索或探索阶段及生效日期、经费项目、相关角色、已确认的发票抬头税号。</td><td>缺少时问一次并保存；用户告知变更、资料冲突或费用跨阶段时，只核对受影响的信息。</td></tr><tr><td>成员长期资料</td><td>办理人的姓名、部门、角色，以及实际办理需要的已核实系统身份和收款资料。</td><td>同一成员直接沿用；换人办理时读取对应成员资料，不混用个人账户。</td></tr><tr><td>本次事项记录</td><td>买什么、用途、供应商、数量金额、合同总额、付款来源、日期、交付进度、审批单号和本次附件。</td><td>从本次材料提取，只问影响下一步的缺项；继续办理时沿用这一笔的记录。</td></tr></tbody></table></div><ol class='decision-order'><li><strong>首次使用：建立最小档案</strong><p>Agent 从已有信息中提取团队和成员资料，只补问当前办理必需的缺项。确认后保存，后续调用先读档。无需一次填写完整资料表。</p></li><li><strong>再次办理：先读档，再看新材料</strong><p>团队、阶段与成员信息自动沿用；根据新订单或合同记录本次金额、用途、付款与交付，不重复问长期问题。</p></li><li><strong>阶段发生变化：保存生效日</strong><p>例如从预探索转入探索，追加新阶段和生效日期。旧事项保留原来的阶段依据，不因为当前阶段变化而全部改成探索。</p></li><li><strong>中途回来：接着原事项办</strong><p>保存采购、付款、验收和审批进度，读取原单号及材料，告诉用户这次要补什么。不会把每次对话都当成一笔新采购。</p></li></ol><div class='callout'><strong>记忆实际保存在哪里</strong><p>本版本提供本地档案读写工具，团队与事项记录保存在用户设备的私有目录，独立于 Skill 安装目录。成功写入后才表示已记住；更换设备需要迁移档案，不自动云同步。用户可要求查看、更正或删除。</p></div></section>
+<section id='start'><div class='section-head'><p class='section-label'>02 / Agent 填写指南</p><h2>读取团队档案，判断本次事项的办理路径</h2><p class='section-desc'>Agent 先读取已确认的团队、成员和阶段信息，再从本次订单、合同或票据提取事实。用户无需重填长期资料，也无需选择流程。</p></div><div class='table-wrap'><table><thead><tr><th scope='col'>你要办的事</th><th scope='col'>进哪个系统</th><th scope='col'>已经确认的入口</th></tr></thead><tbody><tr><td>购买设备、软件或供应商服务；办理采购、合同、入库</td><td>企业微信 → 资采管理</td><td>采购：我的采购项目 → 发起采购申请；合同：我的采购合同；入库：建账入库申请。</td></tr><tr><td>领取经费预支、个人报销、核销、劳务申请及发放</td><td>企业微信 → 合思</td><td>首页 → 新建单据；再按所属阶段与业务匹配模板。</td></tr><tr><td>整理发票、写用途、填验收单、补附件</td><td>先整理材料，之后进入对应系统</td><td>一笔业务可能先在资采办理，再到合思处理资金。不是二选一。</td></tr></tbody></table></div><ol class='decision-order'><li><strong>读取档案，判断适用阶段</strong><p>沿用已确认的团队阶段历史和经费项目，结合本次费用日期及用途判断。仅在信息缺失、变更或跨阶段时补问相关事实。</p></li><li><strong>再看业务与进度</strong><p>采购、劳务和差旅先分开。采购再判断：未买、待审批、已买、已验收、已提单或被退回。已有单据就接着办。</p></li><li><strong>采购看完整金额</strong><p>分别记录合同／订单总额、币种、本次申请付款额、已付款额。单笔分期不能只拿本次付款额决定采购档位。</p></li><li><strong>财务看谁付款</strong><p>个人垫付走报销；学院个人预支款走核销；要先领钱则申请预支；付给供应商另走对公路径。</p></li><li><strong>最后补验收与专项材料</strong><p>货物看实物验收与适用入库；服务看交付与服务验收；境外、劳务、差旅再叠加各自要求。</p></li></ol><div class='table-wrap'><table><thead><tr><th scope='col'>你的阶段</th><th scope='col'>模板怎么处理</th><th scope='col'>现在能确定什么</th></tr></thead><tbody><tr><td>预探索</td><td>当前账号界面见过“一年制/预探索期学员经费预支”“一年制/预探索期学员费用报销”“一年制/预探索期学员劳务外包申请”。使用前核对当前账号与事项。</td><td>可按对应业务准备草稿；看到模板不等于费用符合范围。</td></tr><tr><td>探索</td><td>读取探索阶段当前实际模板；不要沿用预探索模板。现有观察仅见过“一年制/探索期学员劳务费发放”这一名称。</td><td>完整模板清单、预算与可报范围尚未核实，不能替用户猜选。</td></tr><tr><td>刚转阶段／阶段未知</td><td>先核对阶段生效时间与这笔业务的发生日期，再确定经费和模板。</td><td>先整理现有材料；阶段归属不明时，暂不提交依赖阶段的单据。</td></tr></tbody></table></div><div class='callout'><strong>第一次使用时，Agent 怎么问</strong><p>如果材料里没有这些信息，先直接问：“你现在是预探索还是探索？这笔是准备买，还是已经买了？”随后只补问会改变当前路径的金额、用途或付款来源。已有信息不重复问。</p></div></section>
+<section id='purchase'><div class='section-head'><p class='section-label'>03 / Agent 填写指南</p><h2>还没采购：用金额确定采购路径</h2><p class='section-desc'>以下是培训所述路径，前提是当前阶段和经费允许这笔支出。金额先看完整交易。阈值的累计口径，以及恰好等于 1000／10000 元怎么处理，仍需学院确认。</p></div><article class="scenario" id="purchase-small"><p class="kicker">情况 A</p><h3>金额明确低于 1000 元</h3><p class="condition">例如单笔 600 元研发配件，没有分期、合并订单等金额口径争议。</p><div class="now"><span>现在做什么</span><strong>按培训的小额自采路径准备购买：无需采购申请、无需入库。买完到合思报销或核销。即使只报 100 元，也要验收。</strong></div><dl class="route-detail"><div><dt>系统入口</dt><dd>采购后，根据付款来源进入合思报销或核销；具体见下一节。</dd></div><div><dt>填写内容</dt><dd>先留商品明细、数量、单价和研发用途。收货后在验收表写实际数量、金额、验收日期及结论。</dd></div><div><dt>准备材料</dt><dd>订单／明细、发票、实际验收照片或交付证据、适用验收单及真实签署；整理付款记录。</dd></div><div><dt>下一步</dt><dd>验收材料齐全后办报销或核销。还没收货时先留材料，不提前写“已验收合格”。</dd></div></dl></article><article class="scenario" id="purchase-medium"><p class="kicker">情况 B</p><h3>金额明确高于 1000 元、低于 1 万元</h3><p class="condition">例如采购一台 5000 元设备，尚未下单。</p><div class="now"><span>现在做什么</span><strong>先提采购申请，获批后再购买。批准后系统会弹待办，录入供应商和实际成交金额。货物再验收、入库；服务不入库。</strong></div><dl class="route-detail"><div><dt>系统入口</dt><dd>企业微信 → 资采管理 → 我的采购项目 → 发起采购申请。</dd></div><div><dt>填写内容</dt><dd>写采购名称、研发用途、规格、数量、单价、预算总额和经费项目；已有报价据实附上。具体字段名和必填项按实际页面。培训称这一档一般有项目导师审批节点。</dd></div><div><dt>准备材料</dt><dd>需求说明、商品明细／报价；后续补供应商、发票、验收及适用入库材料。</dd></div><div><dt>下一步</dt><dd>申请获批 → 采购／选商录入 → 验收 → 适用货物入库 → 合思报销或核销。</dd></div></dl></article><article class="scenario" id="purchase-large"><p class="kicker">情况 C</p><h3>金额明确高于 1 万元</h3><p class="condition">例如完整设备采购 1.8 万元，尚未采购或签署承诺。</p><div class="now"><span>现在做什么</span><strong>在情况 B 的基础上，按培训进入学院采购路径，并准备三家比价。不要直接按团队自采办理。</strong></div><dl class="route-detail"><div><dt>系统入口</dt><dd>资采管理 → 我的采购项目，按学院采购流程办理；具体分支与负责人须按当前系统核对。</dd></div><div><dt>填写内容</dt><dd>整理完整需求、总金额、规格数量、服务范围、交付时间和报价比较。有合同则单独整理付款阶段与验收条件。</dd></div><div><dt>准备材料</dt><dd>需求明细、三家报价及比较说明、适用合同材料；后续补验收、发票和入库材料。</dd></div><div><dt>下一步</dt><dd>完成学院采购审批及适用合同环节，再按约定采购、付款、验收；供应商付款见下一节对公路径。</dd></div></dl></article><article class="scenario" id="purchase-boundary"><p class="kicker">情况 D</p><h3>恰好 1000／10000 元，或金额口径不清</h3><p class="condition">金额压在分界上；合同分期；多件合单；外币折算；总额、本次付款额或累计金额可能落入不同档。</p><div class="now"><span>现在做什么</span><strong>先整理全额与分期明细，由学院确认档位。只暂停档位相关的购买、签约或提交决定，继续准备需求和附件。</strong></div><dl class="route-detail"><div><dt>系统入口</dt><dd>不凭猜测新建某一档审批，也不通过拆单改变路径。</dd></div><div><dt>填写内容</dt><dd>并列写合同／订单总额、币种、数量单价、本次付款额、已付款额；说明造成歧义的事实。</dd></div><div><dt>准备材料</dt><dd>完整合同／订单、付款约定及报价，不只提供本次付款截图。</dd></div><div><dt>下一步</dt><dd>金额口径明确后进入 A、B 或 C。不要自行把等号归到任意一边。</dd></div></dl></article><div class='callout'><strong>合同多少钱，不等于这次付多少钱</strong><p>例：合同总额 18000 元，预付 5000 元，已付 0 元。这三个数分别记录，不能据 5000 元直接认定属于中档自采。按完整合同准备学院采购材料，同时核实金额归档口径。是否必须签合同、在哪一节点审批，现有资料没有统一金额标准。已需要办理的合同从“我的采购合同”进入，不能凭采购阈值另造合同门槛。</p></div></section>
+<section id='payment'><div class='section-head'><p class='section-label'>04 / Agent 填写指南</p><h2>采购路径确定后，再按谁付款办理资金</h2><p class='section-desc'>采购申请与财务单据可能都要办。下面五种情况由 Agent 根据付款事实匹配，不能用财务申请替代应有的采购审批。培训称预探索和探索都是四类流程：预支、报销／核销、劳务申请、劳务发放。流程类别相同，不等于两阶段可报范围相同。</p></div><div class='table-wrap'><table><thead><tr><th scope='col'>合思里这类事</th><th scope='col'>对应什么</th><th scope='col'>不要和它搞混</th></tr></thead><tbody><tr><td>经费预支</td><td>还没花，先向学院领一笔个人预支款</td><td>不是付给供应商的对公预付</td></tr><tr><td>费用报销</td><td>用自己的钱垫付后，把钱报回来</td><td>选了报销就会再付款；已用预支款的不要改选报销</td></tr><tr><td>预支核销</td><td>花的是之前领到的学院预支款，把原借款核掉</td><td>核销不再付一笔钱给你</td></tr><tr><td>劳务申请／发放</td><td>付给个人的劳务，先申请，做完再发放</td><td>不要套普通设备采购表</td></tr></tbody></table></div><article class="scenario" id="pay-advance"><p class="kicker">情况 1</p><h3>还没付款，想先领学院的钱</h3><p class="condition">团队需要个人预支款，且本笔适用预支。</p><div class="now"><span>现在做什么</span><strong>先核对预算、用途及所需采购审批，再准备个人经费预支申请。</strong></div><dl class="route-detail"><div><dt>系统入口</dt><dd>合思 → 新建单据 → 当前阶段适用的经费预支模板。</dd></div><div><dt>填写内容</dt><dd>预支用途、需要预支的本次金额、经费／项目、真实收款账户；有关联采购时保留相应单号与材料。</dd></div><div><dt>准备材料</dt><dd>采购需求／预算说明、适用采购审批及真实收款信息。</dd></div><div><dt>下一步</dt><dd>培训口径：个人单笔不超过 1 万元；有上笔预支时先核对 70% 核销条件。收到款并支出后转情况 3。</dd></div></dl></article><article class="scenario" id="pay-personal"><p class="kicker">情况 2</p><h3>已用自己的钱垫付</h3><p class="condition">付款确为个人自有资金，且同笔费用未从学院领取预支或另行报销。</p><div class="now"><span>现在做什么</span><strong>完成适用采购、验收及入库后，准备个人垫资报销。</strong></div><dl class="route-detail"><div><dt>系统入口</dt><dd>合思 → 新建单据 → 当前阶段费用报销模板，按实际页面选择个人垫资对应类型。</dd></div><div><dt>填写内容</dt><dd>实际费用、发生日期、用途、经费项目、报销金额、本人真实收款账户；关联应有的采购或出行申请。</dd></div><div><dt>准备材料</dt><dd>发票、付款记录、验收及签署；适用采购审批、报价、合同和入库材料。</dd></div><div><dt>下一步</dt><dd>按现行流程提交、跟进审批并完成打印交单。培训称一般审批约 2–3 个工作日，付款安排为周二／周四；这不是到账保证。</dd></div></dl></article><article class="scenario" id="pay-offset"><p class="kicker">情况 3</p><h3>花的是之前领到的学院预支款</h3><p class="condition">已领取个人预支款，本次费用用该款支付。</p><div class="now"><span>现在做什么</span><strong>准备个人预支核销，关联原借款／待核销事项。</strong></div><dl class="route-detail"><div><dt>系统入口</dt><dd>合思 → 当前阶段费用报销／核销对应模板，按实际页面选择核销类型。</dd></div><div><dt>填写内容</dt><dd>本次真实支出、核销金额、原预支单号及对应明细；不得把它改选成个人垫资再收一笔钱。</dd></div><div><dt>准备材料</dt><dd>本次票据、付款及验收材料、适用入库材料和原预支关联。</dd></div><div><dt>下一步</dt><dd>核对系统核销结果及原款剩余金额；有未花余额或退款时按财务要求处理，不擅自抵作下一笔。</dd></div></dl></article><article class="scenario" id="pay-supplier-pre"><p class="kicker">情况 4</p><h3>合同要求学院先付供应商一笔钱</h3><p class="condition">供应商尚未完成交付，合同约定预付款。</p><div class="now"><span>现在做什么</span><strong>准备对公预付。已由学院支付预付款的，交付后转对公核销。</strong></div><dl class="route-detail"><div><dt>系统入口</dt><dd>合思的对公预付／核销对应流程；具体模板名称尚未核实，Agent 需读取当前模板后匹配。</dd></div><div><dt>填写内容</dt><dd>合同总额、本次预付金额、比例、付款条件、供应商法定名称及真实对公账户；核销时关联原预付单。</dd></div><div><dt>准备材料</dt><dd>合同及适用采购审批、报价或其他付款依据；交付后补票据和真实验收资料。</dd></div><div><dt>下一步</dt><dd>对公按合同约定办理，不套个人预支的 1 万元／70% 条件；仍要满足预算、合同与审批要求。</dd></div></dl></article><article class="scenario" id="pay-supplier-due"><p class="kicker">情况 5</p><h3>已交付，供应商等学院直接付款</h3><p class="condition">用户没有个人垫付，也没有可关联的学院预付款。</p><div class="now"><span>现在做什么</span><strong>整理直接对公付款材料，先核实该业务的合思模板和付款前置条件。</strong></div><dl class="route-detail"><div><dt>系统入口</dt><dd>不能选个人垫资报销，也不能虚构原预付单做核销；直接对公模板尚待核实。</dd></div><div><dt>填写内容</dt><dd>真实供应商、合同／订单、交付验收、本次应付金额、累计已付金额及对公收款信息。</dd></div><div><dt>准备材料</dt><dd>适用采购审批、合同／订单、发票和验收，货物按适用要求补入库。</dd></div><div><dt>下一步</dt><dd>真实模板与付款条件明确后办理对公申请，由学院有权人员完成审批和付款。</dd></div></dl></article></section>
+<section id='acceptance'><div class='section-head'><p class='section-label'>05 / Agent 填写指南</p><h2>货物与服务决定材料，不改变钱的真实来源</h2><p class='section-desc'>先得到采购路径和资金路径，再叠加这一层。服务采购不等于个人劳务；混合订单要保留各部分的真实内容。</p></div><div class='table-wrap'><table><thead><tr><th scope='col'>你的情况</th><th scope='col'>验收怎么填</th><th scope='col'>还要做什么</th></tr></thead><tbody><tr><td>买设备、配件、样机等实物</td><td>写真实品名、型号、送达数量、单价、小计、合计和验收日期；附实际照片，按实际检查结果填写结论。</td><td>团队自采优先核对自采验收单的适用性；学院货物采购核对货物类表。适用货物在资采“建账入库申请”办理。</td></tr><tr><td>购买软件订阅、设计、加工或其他供应商服务</td><td>写服务内容、期间、交付物与验收记录；用途写清与研发项目的关系。</td><td>培训称服务不办理货物入库。自采服务使用哪张验收表仍需核实，不把所有服务机械套进同一张表。</td></tr><tr><td>同一订单既有设备也有服务</td><td>拆明细：设备型号数量金额、服务内容期间金额各自列出；总额核对一致。</td><td>确认表格组合与货物部分入库；这里拆明细是为了记录交付，不是拆采购金额。</td></tr><tr><td>货物还没到／服务还没完成</td><td>先准备明细与待验收项目，不填已经合格或虚构签字日期。</td><td>按进度停在采购、预支或合同预付阶段；实际交付后再补验收。</td></tr></tbody></table></div><h3>三张验收单，分别填什么</h3><div class='table-wrap'><table><thead><tr><th scope='col'>团队自采验收单</th><th scope='col'>怎么写</th><th scope='col'>不要沿用样例</th></tr></thead><tbody><tr><td>货物／服务名称、型号参数</td><td>按实物或订单原文逐项写。</td><td>模板里的“鼠键套装／宏基鼠键套装”是样例，先清空。</td></tr><tr><td>送达数量、单价、金额小计、其他</td><td>数量乘单价等于小计；币种单独记录。</td><td>样例行 120 × 6 = 720，合计却印着 1950，不能当作用户交易。</td></tr><tr><td>金额合计</td><td>与各行小计、对应发票合计核对。</td><td>多张发票可以放进同一张验收单，但明细不能糊成一行。</td></tr><tr><td>验收照片</td><td>附实际收货或交付证据。</td><td>购买截图能否代替实物照片，尚未确认。</td></tr><tr><td>验收内容、验收时间</td><td>合格或不合格按实际检查填写；日期写真实验收日。</td><td>还没收到货，不能提前勾合格。</td></tr><tr><td>团队经办人、辅导老师签字</td><td>留给对应的人亲笔签。</td><td>培训还提到组长；经办人与组长是否同一人，待学院核对。</td></tr></tbody></table></div><div class='table-wrap'><table><thead><tr><th scope='col'>货物类验收单</th><th scope='col'>怎么写</th><th scope='col'>还要勾的五项</th></tr></thead><tbody><tr><td>货物名称、规格型号、数量单价金额</td><td>与自采表同类，按货物原文填写。</td><td>交付是否按期、包装完好、能否正常使用。</td></tr><tr><td>金额合计、验收照片</td><td>合计与发票一致；照片是实物。</td><td>需要安装、培训或施工的，是否已经做完。</td></tr><tr><td>学院验收意见、日期</td><td>留给学院有权人员填写，Agent 不代填结论。</td><td>发票上的客户名称、金额、数量、品名规格是否与要求一致；保修卡和售后是否明确；是否还要特殊验收。</td></tr></tbody></table></div><div class='table-wrap'><table><thead><tr><th scope='col'>服务类验收单</th><th scope='col'>怎么写</th><th scope='col'>履约评价表</th></tr></thead><tbody><tr><td>项目名称、采购经办人／部门、供应商</td><td>按真实项目和合同主体。</td><td>人员配置 20、到岗 30、服务质量 30、协调配合 20。</td></tr><tr><td>服务起止时间、验收记录</td><td>写期间和分项通过／不通过；软件订阅要写清用途，不虚构现场搭建。</td><td>原表等级：优秀 90–100，良好 75–89，合格 60–74，不合格 ≤59。</td></tr><tr><td>验收结论、甲乙双方签名盖章</td><td>结论和签字盖章由对应人员完成。</td><td>分项能否套到软件订阅，须另核对，不能机械打满 100 分。</td></tr></tbody></table></div><div class='callout'><strong>谁来签，按哪张表</strong><p>自采表有“团队经办人、辅导老师”签字位；培训还提到组长，角色对应关系待学院核对。货物类表有检查项目和学院意见；服务文件另附履约评价。Agent 可以准备表格，但实际结论、评分、签字和盖章由对应人员完成。</p></div></section>
+<section id='fill'><div class='section-head'><p class='section-label'>06 / Agent 填写指南</p><h2>把同一笔业务整理成可直接填写的内容</h2><p class='section-desc'>以下是填写内容清单，不假称已经核实每个页面的字段名。Agent 打开实际表单后对应字段填写；没有的字段不编造，已有值不重复问。</p></div><h3>资采：采购申请</h3><div class='table-wrap'><table><thead><tr><th scope='col'>字段</th><th scope='col'>怎么写</th><th scope='col'>示例格式（方括号换成真实信息）</th></tr></thead><tbody><tr><td>项目／采购名称</td><td>说清项目和所购内容，避免只写“报销”。</td><td>[项目名]研发测试设备采购</td></tr><tr><td>需求／用途</td><td>写要完成的任务、验证目的及与项目关系，不为了可报而改用途。</td><td>用于[项目]的[具体测试]，采购[设备]以验证[指标]。</td></tr><tr><td>规格与明细</td><td>名称、型号、数量、单价逐项列出；费用币种单独记录。</td><td>[型号] × [数量]，单价[金额][币种]。</td></tr><tr><td>预算／预计采购额</td><td>申请时填真实预计金额，成交后按相应环节填真实成交金额。</td><td>预计总额[金额]；依据[报价／订单明细]。</td></tr><tr><td>经费／项目归属</td><td>匹配真实团队、阶段和经费；不自行造项目或填错年度。</td><td>选择系统内已确认的[经费项目]。</td></tr><tr><td>供应商及附件</td><td>是否在申请时填写或在后续选商待办填写，以实际页面为准。</td><td>[供应商法定名称]；附[需求／报价文件]。</td></tr></tbody></table></div><h3>资采：合同申请</h3><div class='table-wrap'><table><thead><tr><th scope='col'>字段</th><th scope='col'>怎么写</th><th scope='col'>金额如何避免混淆</th></tr></thead><tbody><tr><td>合同主体与标的</td><td>按合同原文记录双方、采购／服务内容及关联采购。</td><td>学院签约主体不能凭抬头猜填。</td></tr><tr><td>合同总额</td><td>记录全合同金额、币种和合同中的含税约定。</td><td>例：18000 元，不用预付款 5000 元覆盖总额。</td></tr><tr><td>付款安排</td><td>逐期记录金额／比例、付款条件及已付情况。</td><td>例：本次预付 5000 元，已付 0 元；余款条件照合同写，不自己编。</td></tr><tr><td>履约与验收</td><td>记录交付时间、地点／方式、交付物及验收条件。</td><td>尚未发生的交付不要填成已经完成。</td></tr><tr><td>合同文件与审批</td><td>附真实拟签或已签版本，保留其状态及关联采购材料。</td><td>是否需要、何时提合同审批尚待现行制度核实；提交申请不等于合同已签署。</td></tr></tbody></table></div><h3>合思：财务单据</h3><div class='table-wrap'><table><thead><tr><th scope='col'>字段</th><th scope='col'>怎么写</th><th scope='col'>随业务变化的内容</th></tr></thead><tbody><tr><td>模板／费用类型</td><td>根据适用阶段、真实业务与付款来源匹配。</td><td>报销、预支、核销、对公不能按金额相近随便互换。</td></tr><tr><td>标题与事由</td><td>标题写事项，事由写用途和相关业务事实。</td><td>[项目]的[设备／服务]费用；用于[任务]，关联[采购／借款单号]。</td></tr><tr><td>日期与金额</td><td>日期按字段含义填真实日期；金额按实际支出或本次申请付款填写。</td><td>发生日、开票日、申请日不同；合同总额与本次付款也不同。</td></tr><tr><td>收款信息</td><td>个人报销填真实个人账户，对公填供应商账户和对应开户支行。</td><td>预支核销按页面关联原款，不重新指定个人收款来重复领款。</td></tr><tr><td>原单关联</td><td>读取应关联的真实采购、出行、劳务或预支单。</td><td>核销必须对应原预支／借款事项；不能用文字说明代替系统所需关联。</td></tr><tr><td>附件</td><td>按当前情形上传已有且完整的票据、验收、审批等材料。</td><td>缺签名、缺票、未验收时，先说明具体缺件，不能用无关材料凑齐。</td></tr></tbody></table></div><div class='callout'><strong>发票与验收单金额怎么对</strong><p>可把多张发票放入一份适用验收单，但要保留真实货物／服务明细，核对数量、单价、小计、合计和付款差额。先清空 Word 样例内容；开票抬头、税号使用学院确认资料。购买截图能否代替实物验收照片尚未确认。</p></div></section>
+<section id='deliverables'><div class='section-head'><p class='section-label'>07 / Agent 填写指南</p><h2>按这笔业务准备文件，给出可直接使用的内容</h2><p class='section-desc'>Agent 不止告诉用户需要哪些东西，还要把已有信息填好、文件整理好。缺少真实材料或签署时，明确指出缺哪一项。</p></div><div class='table-wrap'><table><thead><tr><th scope='col'>交付物</th><th scope='col'>Agent 完成什么</th><th scope='col'>留给用户或相关人员的部分</th></tr></thead><tbody><tr><td>本次办理方案</td><td>说明当前情况、要走的采购与资金路径、现在先做什么、进入哪个系统及下一步条件。</td><td>只回答影响当前办理的缺失事实。</td></tr><tr><td>验收单 Word 草稿</td><td>按适用情形选取仓库中三份原始模板，复制后清除示例内容，填写本次明细、金额、期间及已证实的事实。</td><td>提供真实交付证据；验收结论、评分、签名盖章由有权人员据实完成。</td></tr><tr><td>资采／合思填写内容</td><td>准备标题、用途、明细、金额、经费归属、关联单据及附件对应关系。</td><td>当前未接通学院自动提交；按这些内容填入实际页面，页面字段差异再核对。</td></tr><tr><td>附件目录与缺件清单</td><td>整理已有订单、合同、报价、发票、付款和交付材料，标明哪一步使用、什么已经齐全。</td><td>提供缺失的真实发票、付款凭证、照片或签署，不以生成文字替代事实证据。</td></tr><tr><td>事项记录</td><td>保存本次采用的团队信息、流程判断、文件位置、模板版本和当前进度。</td><td>下次继续办理时只补新增信息。</td></tr></tbody></table></div><h3>三份原始模板统一维护</h3><div class='table-wrap'><table><thead><tr><th scope='col'>模板</th><th scope='col'>文件内容</th><th scope='col'>Agent 使用方式</th></tr></thead><tbody><tr><td>团队自采</td><td>团队自采验收单，含明细、照片和签字位置。</td><td>按采购途径和交付类型核对适用性后填写。</td></tr><tr><td>货物类</td><td>原文件名为“非服务”，正文为货物类验收单。</td><td>填写货物明细与实际交付，保留学院验收意见位置。</td></tr><tr><td>服务类</td><td>服务验收单及采购项目履约评价表。</td><td>清除示例项目、经办人和部门；不能把样例活动内容套给软件服务。</td></tr></tbody></table></div><div class='callout'><strong>每次使用模板副本</strong><p>三份原始 Word 文件随 GitHub 项目及 Skill 一起分发。Agent 优先用随包模板；缺失时按模板清单的 GitHub 地址下载并核对文件哈希。填写结果存入本次事项目录，保留模板原件。模板更新后，新事项核对新版；已有事项不静默换表。</p></div></section>
+<section id='examples'><div class='section-head'><p class='section-label'>08 / Agent 填写指南</p><h2>把阶段、金额、付款和类型组合起来</h2><p class='section-desc'>以下都是说明判断方式的虚构例子，不是你的真实交易，也不代表相应费用已获学院批准。例子一至三假设适用阶段与经费已确认允许该项支出。</p></div><article class='worked-example'><h3>预探索 · 600 元研发配件 · 自己已付款、已收货</h3><p class='condition'>单笔人民币 600 元，无分期；自有资金垫付；已实际验收。</p><p class='example-decision'><b>判断结果</b>小额自采 + 个人垫资报销 + 实物验收。</p><ol><li>整理订单、发票和付款记录；填自采适用验收表：品名、规格、数量单价、600 元合计、真实验收结果与日期，补照片及签署。</li><li>合思 → 新建单据 → 核对预探索费用报销模板；匹配个人垫资类型，填研发用途、真实发生日、600 元及本人收款信息。</li><li>附材料并按当前流程办理。培训的小额口径下无需采购申请或入库；仍需完成验收和后续交单。</li></ol><p class='example-missing'><b>此例还需注意：</b>只补问材料里缺失的具体研发用途、验收或签署，不再让用户选择流程。</p></article><article class='worked-example'><h3>探索 · 5000 元设备 · 还没买、希望先领经费</h3><p class='condition'>完整单笔人民币采购额 5000 元，个人申请预支也是 5000 元，无上笔未清预支。</p><p class='example-decision'><b>判断结果</b>先采购申请 + 个人预支 + 实物验收及适用入库 + 后续核销。</p><ol><li>资采 → 我的采购项目 → 发起采购申请；填设备规格、数量、预算 5000 元、用途、经费项目及报价。获批后再购买。</li><li>核实探索阶段经费预支模板及流程先后要求，准备 5000 元预支申请和真实收款资料；不能复制预探索模板名称。</li><li>收到预支款并采购后，填写真实成交及供应商信息；收货验收，办理适用入库。</li><li>合思按探索阶段核销路径关联原预支，填实际支出并附票据、验收及入库材料，不改选个人垫资。</li></ol><p class='example-missing'><b>此例还需注意：</b>探索阶段模板目前尚未完整核实：先完成字段草稿，匹配到真实模板后再办理。</p></article><article class='worked-example'><h3>预探索 · 3000 元研发软件 · 已用学院预支款支付</h3><p class='condition'>服务期间和研发用途明确，所需事前采购审批已完成；服务已交付且具有验收依据。</p><p class='example-decision'><b>判断结果</b>服务采购 + 个人预支核销；不办理货物入库。</p><ol><li>保留采购审批、订单／合同、服务期间、invoice／发票及付款记录，说明软件用于哪个研发任务。</li><li>核实团队自采服务使用的验收表，按真实交付记录填验收；不虚构实物照片。</li><li>合思使用适用的预支核销路径，关联原预支单，填本次实际核销金额。</li><li>若实际以外币支付，叠加境外金额处理；人民币实扣与原币金额分别记录。</li></ol><p class='example-missing'><b>此例还需注意：</b>只核对原预支单、服务验收表组合和缺失的交付材料，不按“软件”一词直接判断可报。</p></article><article class='worked-example'><h3>合同总额 18000 元 · 供应商要求先付 5000 元</h3><p class='condition'>尚未签约或付款；已有合同草案，预付款与合同总额不同。</p><p class='example-decision'><b>判断结果</b>先核对完整合同的采购档位，准备学院采购与合同材料；资金侧为对公预付。</p><ol><li>完整记录总额 18000 元、本次预付 5000 元、已付 0 元、币种及约定付款条件；不能只看 5000 元选择自采。</li><li>核实完整金额适用口径；按高于 1 万元的培训路径准备学院采购和三家比价，并办理适用合同环节。</li><li>核实合思对公预付模板，填供应商真实主体与对公收款信息，附合同和应有审批。</li><li>学院预付、供应商交付后再验收，并在对公核销时关联原预付；货物按适用条件入库，服务不做货物入库。</li></ol><p class='example-missing'><b>此例还需注意：</b>阶段与经费未提供时先核实；合同审批节点和对公模板均未核实，不能凭该例直接提交。</p></article><article class='worked-example'><h3>刚从预探索转探索 · 1000 元旧订单 · 已自行购买</h3><p class='condition'>费用跨阶段，金额恰好在边界，且已经购买。</p><p class='example-decision'><b>判断结果</b>同时命中阶段归属、金额边界和事前审批三个核对点，先处理例外。</p><ol><li>整理转阶段生效日、下单／付款／开票日、订单总额及是否已有采购审批。</li><li>由财务／采购确认这笔归属阶段、1000 元档位，以及既成采购的补救办理方式。</li><li>Agent 先整理真实票据、付款与验收资料，保留原日期；不倒签、不声称当时已经获批。</li><li>三项明确后，再按真实付款来源匹配报销或核销。</li></ol><p class='example-missing'><b>此例还需注意：</b>只追问上述缺失事实；不会因为当前显示探索期就替这笔旧订单选探索模板。</p></article></section>
+<section id='exceptions'><div class='section-head'><p class='section-label'>09 / Agent 填写指南</p><h2>不是从零开始时，先处理当前卡住的那一步</h2><p class='section-desc'>这些情况优先于普通新建流程。Agent 先读取已有单据和材料，再给下一步，不把所有人都带回重新申请。</p></div><h3>资格还没定，或已经买了</h3><div class='table-wrap'><table><thead><tr><th scope='col'>你现在的情况</th><th scope='col'>Agent 给出的下一步</th><th scope='col'>填写／材料重点</th></tr></thead><tbody><tr><td>尚未明确用途或费用可能不在范围</td><td>先核实真实用途、阶段和经费，整理草稿；资格未明前不建议直接购买。</td><td>研发样机、竞品、研发软件需具体用途；培训不支持的办公、投流和附赠礼品不能改名报销。调研补偿另核。</td></tr><tr><td>应事前申请，但已经买了</td><td>保留真实时间线与材料，向学院核对既成采购处理办法。</td><td>不倒签或补造已审批事实；具体补办政策现有材料未给出。</td></tr></tbody></table></div><h3>单据已经在路上</h3><div class='table-wrap'><table><thead><tr><th scope='col'>你现在的情况</th><th scope='col'>Agent 给出的下一步</th><th scope='col'>填写／材料重点</th></tr></thead><tbody><tr><td>已有采购／财务单，正在审批</td><td>读取原单状态、当前节点与待办，沿原单继续；没有退回要求时不重复新建。</td><td>提交成功不等于获批；获批不等于到账。</td></tr><tr><td>单据被退回</td><td>先读退回原因，补对应字段或附件，并核对原单是否可修改重提。</td><td>保留原单号、关联及已有附件；重提方式按系统与退回要求。</td></tr><tr><td>提交时超时，不知道成功没有</td><td>先查列表、状态及单号，查清之前不再提交。</td><td>把状态记为待核实，避免产生重复单据。</td></tr><tr><td>缺票、缺签名、没验收或部分交付</td><td>具体列出缺哪一项，准备其余材料；部分验收／付款能否办理另核合同与学院要求。</td><td>不能默认未开发票也可报销，不能把部分交付填成全部完成。</td></tr><tr><td>同笔费用既用预支款，又有个人垫款</td><td>分别整理资金来源、各自金额及付款证据，核实系统如何分摊处理。</td><td>两部分合计应对应交易；不能把全额同时报销与核销。</td></tr></tbody></table></div><h3>劳务、差旅、境外、退款、现有资产</h3><div class='table-wrap'><table><thead><tr><th scope='col'>你现在的情况</th><th scope='col'>Agent 给出的下一步</th><th scope='col'>填写／材料重点</th></tr></thead><tbody><tr><td>境外订阅或外币付款</td><td>先核实用途与采购要求，再准备境外票据和金额依据。</td><td>有人民币实扣按实际核对；只有外币时，培训称按提单日中行中间价，准确来源与折算细则待确认。</td></tr><tr><td>支付个人劳务</td><td>先走适用阶段劳务申请，完成服务后关联申请办理发放；不直接套普通设备采购表。</td><td>税前金额、人员、实际内容、资质、劳务验收及真实签署；低于 800 元日标准也不能省证明，边界与税款口径待核。</td></tr><tr><td>外出调研、差旅或出境</td><td>出行前走适用申请，报销关联行程与审批；已出行未申请时先核补办方式。</td><td>交通、住宿、人员日期和订票记录；培训餐食暂不可报。阶段资格、住宿限额及出境材料按现行制度核实。</td></tr><tr><td>退款、红冲、取消或合同变更</td><td>先关联原交易、票据和审批，记录退款／变更金额，再核财务与采购后续动作。</td><td>不删除关联或复用失效票据；重审、冲销、退还预支等办理方式尚待学院明确。</td></tr><tr><td>只是借用或变动现有学院资产</td><td>从资采的资产借用、变动业务等对应入口核对，不当作新的购买报销。</td><td>准备资产标识、保管／使用人、实际位置和原因；具体字段与审批尚未验证。</td></tr></tbody></table></div><div class='callout'><strong>每次最终只给你一份办理方案</strong><p>明确：你属于什么情况；现在先做哪一步；进入哪个系统与模板；已经能填哪些内容；缺哪几项材料；何种结果出现后进入下一步。能代填就按授权代填，受限时只指导具体受限步骤。技术接口与资料追溯留在 Skill 内部，不放进用户办理正文。</p></div></section></div>
+<footer>
+  <span>分情况准备办理方案。实际以学院现行规则和页面为准。</span>
+  <span>v0.6 · 2026-09-22</span>
+</footer>
+</article>
+</body>
+</html>

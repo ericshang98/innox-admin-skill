@@ -1,0 +1,35 @@
+{
+  "status": "用户提供的原始模板；现行适用性待学院确认",
+  "templates": [
+    {
+      "id": "self-purchase",
+      "title": "团队自采验收单",
+      "file": "self-purchase.docx",
+      "original_filename": "05-2 深圳科创学院采购验收单（团队自采）(3).docx",
+      "sha256": "f1ca8f9c52eafc8dff39eceec341415d65cfc708a16b5c73aa5192f695aaf8ce",
+      "raw_url": "https://raw.githubusercontent.com/ericshang98/innox-admin-skill/main/skills/innox-invoice/assets/templates/self-purchase.docx",
+      "version": "user-supplied-2026-09-20",
+      "contains_examples": true
+    },
+    {
+      "id": "goods",
+      "title": "货物类验收单",
+      "file": "goods.docx",
+      "original_filename": "05-2 深圳科创学院采购验收单（非服务）.docx",
+      "sha256": "783ff4a96f8cc54e9140dc7cbafa6287ca8ded7078d9242bf17aba8f079d6f7b",
+      "raw_url": "https://raw.githubusercontent.com/ericshang98/innox-admin-skill/main/skills/innox-invoice/assets/templates/goods.docx",
+      "version": "user-supplied-2026-09-20",
+      "contains_examples": true
+    },
+    {
+      "id": "service",
+      "title": "服务类验收单与履约评价表",
+      "file": "service.docx",
+      "original_filename": "05-1 深圳科创学院采购验收单（服务).docx",
+      "sha256": "c7282c05992086dfcb5c12aa7fb9ded401aff5b8829c00c1d0eb65bb9ee15f44",
+      "raw_url": "https://raw.githubusercontent.com/ericshang98/innox-admin-skill/main/skills/innox-invoice/assets/templates/service.docx",
+      "version": "user-supplied-2026-09-20",
+      "contains_examples": true
+    }
+  ]
+}
