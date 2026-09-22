@@ -23,12 +23,21 @@
 
 Agent 应读取完整的 `skills/innox-invoice/`，包括 `SKILL.md`、`references/`、`scripts/` 和 `assets/`。若所用 Agent 无法读取 GitHub，可下载仓库后把完整 Skill 文件夹交给它。实际文件处理和长期保存能力取决于运行环境；本项目不会自行取得学院系统权限。
 
-Agent 开始办理时先读取 `references/memory.md`。本地档案默认保存在 `~/.local/share/innox-admin/`，也可通过 `INNOX_ADMIN_DATA_DIR` 指定私有目录。Python 辅助脚本仅依赖标准库：
+Agent 开始办理时先读取 `references/memory.md`。本地档案默认保存在 `~/.local/share/innox-admin/`，也可通过 `INNOX_ADMIN_DATA_DIR` 指定私有目录。档案与模板获取脚本只用 Python 标准库，验收单填写工具使用文档依赖：
 
 - `records.py`：持久保存团队、成员与事项，支持历史版本和写入冲突检查。阶段变更保留生效日；既有事项保留当时的资料快照。
-- `prepare_template.py`：校验并复制原始模板；随包文件缺失时从 GitHub 获取。实际内容由 Agent 基于档案及本次材料填写。
+- `prepare_template.py`：校验并复制原始模板；随包文件缺失时从 GitHub 获取。
+- `fill_acceptance.py`：根据 Agent 提取的本次事实填写三类验收单，计算明细金额、插入照片，输出 Word 草稿及缺件记录。需要 `scripts/requirements.txt` 中的文档依赖。
 
 本地档案不是团队云服务。更换设备需迁移私有目录；未提供持久存储的运行环境不能承诺跨会话记忆。无需每次确认长期资料，只有缺失、变更、冲突或跨阶段事项才补问相关信息。
+
+## 让 Agent 帮你做验收单
+
+把已有材料交给 Agent，直接说：
+
+> 请用这个 Skill 帮我做本次采购的验收单。根据订单、发票和交付材料选用适合的模板，填写明细、核对金额、放入收货照片，给我可编辑的 Word 草稿，并说明还缺什么、哪里需要验收和签字。
+
+你不用找空表或自己排版。三份原始模板已随 Skill 分发，Agent 根据采购途径和交付类型判断使用哪份。货物提供真实收货照片；服务提供合同、服务期间和交付证据。材料不齐可以先做已有部分；验收结论、评分、签字盖章留给对应人员。详细执行方式见 [验收单生成流程](skills/innox-invoice/references/acceptance-generation.md)。
 
 ## 原始 Word 模板
 

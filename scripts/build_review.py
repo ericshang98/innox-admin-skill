@@ -102,6 +102,6 @@ assert "127.0.0.1" not in html and "localhost" not in low
 for name in ("rules-review.html", "review-template.html"):
     (ROOT / "docs" / name).write_text(html, encoding="utf-8")
 print(
-    "Built v0.6: single-file handbook, no server, no questionnaire, "
+    "Built v0.7: single-file handbook, no server, no questionnaire, "
     f"{len(data['sections'])} sections."
 )
